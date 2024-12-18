@@ -32,7 +32,7 @@ public class LandingPageStepDefinition {
 //		testConceptSetup.driver = new ChromeDriver();
 //		testConceptSetup.driver.manage().window().maximize();
 //		 testConceptSetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-		testConceptSetup.pageObjectManager.getLandingPage();
+		//testConceptSetup.pageObjectManager.getLandingPage();
 		
 	}
 	@When("user searched with shortname {string} and extracted actual name of product")
