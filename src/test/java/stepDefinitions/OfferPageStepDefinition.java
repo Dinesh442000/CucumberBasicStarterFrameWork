@@ -28,7 +28,8 @@ public class OfferPageStepDefinition {
 		this.testConceptSetup = testConceptSetup;
 	}
 	
-	@Then("user searched for {string} shortname in offers page")
+	//@Then("user searched for {string} shortname in offers page")
+	@Then("^user searched for (.+) shortname in offers page$")
 	public void user_searched_for_same_shortname_in_offers_page_to_check_if_product_exist(String shortName) throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 		switchToOffersPage();
