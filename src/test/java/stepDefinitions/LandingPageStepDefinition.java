@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -16,10 +17,10 @@ import utils.TestContextSetup;
 
 
 public class LandingPageStepDefinition {
-	public WebDriver driver;
 	public String landingPageProductName;
 	public String offerPageProductName;
 	TestContextSetup testConceptSetup;
+	public LandingPage landingPage; 
 	
 	public LandingPageStepDefinition(TestContextSetup testConceptSetup) {
 		this.testConceptSetup = testConceptSetup;
@@ -40,7 +41,7 @@ public class LandingPageStepDefinition {
 	public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) throws InterruptedException {
 	    //Write code here that turns the phrase above into concrete actions
 		//LandingPage landingPage = new LandingPage(testConceptSetup.driver);
-		LandingPage landingPage = testConceptSetup.pageObjectManager.getLandingPage();
+		landingPage = testConceptSetup.pageObjectManager.getLandingPage();
 		landingPage.enterSearchItem(shortName);
 		//testConceptSetup.driver.findElement(By.xpath("//input[@type='search']")).sendKeys(shortName);
 	    Thread.sleep(1000);
@@ -49,7 +50,24 @@ public class LandingPageStepDefinition {
 	}
 	
 
-
+	@When("^user adds (.+) of the item and click on add to cart$")
+	public void user_adds_of_the_item_and_click_on_add_to_cart(String countOfFruits) throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+	    landingPage.enterQuantity(countOfFruits);
+	    landingPage.clickOnAddToCart();
+	    testConceptSetup.quantity = countOfFruits;
+	  
+	}
+	@Then("user click on cart and proceeds to checkout")
+	public void user_click_on_cart_and_proceeds_to_checkout() throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+		  landingPage.clickOnCartBag();
+		//  landingPage.clickOnCheckOut();
+	}
+	
+	
+	
+	
 	
 	
 }
