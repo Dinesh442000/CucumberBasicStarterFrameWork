@@ -47,6 +47,8 @@ public class LandingPageStepDefinition {
 	    testConceptSetup.landingPageProductName =   landingPage.getProductName().split("-")[0].trim();
 	    System.out.println("Product name extracted "+testConceptSetup.landingPageProductName);  
 	}
+	
+
 
 	
 	
