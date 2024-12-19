@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 19, 2024 07:14:43 am</span></a>
+<a href="#"><span class="badge badge-primary">Dec 19, 2024 07:48:28 am</span></a>
 </li>
 </ul>
 </div>
@@ -91,25 +91,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Search and add product to cart and checkout</p>
+            <p class="name">Search and place the order for products</p>
             <p class="text-sm">
-              <span>7:14:44 am</span> / <span>00:00:58:267</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:48:30 am</span> / <span>00:00:51:267</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Search and add product to cart and checkout</h5>
-<span class='badge badge-success'>12.19.2024 7:14:44 am</span>
-<span class='badge badge-danger'>12.19.2024 7:15:42 am</span>
-<span class='badge badge-default'>00:00:58:267</span>
+<h5 class="test-status text-fail">Search and place the order for products</h5>
+<span class='badge badge-success'>12.19.2024 7:48:30 am</span>
+<span class='badge badge-danger'>12.19.2024 7:49:21 am</span>
+<span class='badge badge-default'>00:00:51:267</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -122,14 +122,178 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Search experience for product search in both home and offers page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on GreenCart Landing page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user searched with shortname Tom and extracted actual name of product</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user searched for Tom shortname in offers page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate product name in offers page matches with Landing page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="8"><span class="badge log fail-bg mr-2">Fail</span>Search experience for product search in both home and offers page</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given User is on GreenCart Landing page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user searched with shortname Beet and extracted actual name of product</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user searched for Beet shortname in offers page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And validate product name in offers page matches with Landing page</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [Beetroot] but found [No data]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.OfferPageStepDefinition.validateThedata(OfferPageStepDefinition.java:59)
+	at ✽.validate product name in offers page matches with Landing page(file:///C:/Users/DChoudhary5/eclipse-workspaceNEW/CucumberFramework/src/test/java/features/searchProduct.feature:16)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepDefinitions.Hooks.getScreenShotOnFail(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='./screenshots/embedded1.png' src="./screenshots/embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Search and add product to cart and checkout</p>
+            <p class="text-sm">
+              <span>7:48:30 am</span> / <span>00:00:53:597</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Search and add product to cart and checkout</h5>
+<span class='badge badge-success'>12.19.2024 7:48:30 am</span>
+<span class='badge badge-danger'>12.19.2024 7:49:24 am</span>
+<span class='badge badge-default'>00:00:53:597</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
+                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on GreenCart Landing page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user searched with shortname Beans and extracted actual name of product</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user adds 8 of the item and click on add to cart</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user click on cart and proceeds to checkout</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate product name in cart page matches with Landing page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -163,7 +327,7 @@
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
+                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -190,149 +354,6 @@
                   <div class="step pass-bg">
                     <span>Then validate product name in cart page matches with Landing page</span>
       <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User is on GreenCart Landing page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user searched with shortname Beans and extracted actual name of product</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user adds 8 of the item and click on add to cart</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then user click on cart and proceeds to checkout</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then validate product name in cart page matches with Landing page</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Search and place the order for products</p>
-            <p class="text-sm">
-              <span>7:14:44 am</span> / <span>00:00:57:947</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Search and place the order for products</h5>
-<span class='badge badge-success'>12.19.2024 7:14:44 am</span>
-<span class='badge badge-danger'>12.19.2024 7:15:42 am</span>
-<span class='badge badge-default'>00:00:57:947</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="5"><span class="badge log fail-bg mr-2">Fail</span>Search experience for product search in both home and offers page</div>
-      </div>
-    </div>
-        <div class="scenario_outline ">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Search experience for product search in both home and offers page</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User is on GreenCart Landing page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user searched with shortname Tom and extracted actual name of product</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then user searched for Tom shortname in offers page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And validate product name in offers page matches with Landing page</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="9"><span class="badge log fail-bg mr-2">Fail</span>Search experience for product search in both home and offers page</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step pass-bg">
-                    <span>Given User is on GreenCart Landing page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user searched with shortname Beet and extracted actual name of product</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then user searched for Beet shortname in offers page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>And validate product name in offers page matches with Landing page</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: expected [Beetroot] but found [No data]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at stepDefinitions.OfferPageStepDefinition.validateThedata(OfferPageStepDefinition.java:59)
-	at ✽.validate product name in offers page matches with Landing page(file:///C:/Users/DChoudhary5/eclipse-workspaceNEW/CucumberFramework/src/test/java/features/searchProduct.feature:16)
-</textarea>
-      
       </div>
                   </div>
               </div>
@@ -383,9 +404,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>07:15:38 am</td>
+<td>07:49:07 am</td>
 <td>
-<a href="#" class="linked" test-id='4' id='34'>And validate product name in offers page matches with Landing page</a>
+<a href="#" class="linked" test-id='1' id='24'>And validate product name in offers page matches with Landing page</a>
 <div class="">
 <span class="badge badge-default">Search and place the order for products.Search experience for product search in both home and offers page.And validate product name in offers page matches with Landing page</span>
 </div>
@@ -437,9 +458,9 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>07:14:44 am</td>
+<td>07:48:30 am</td>
 <td>
-<a href="#" class="linked" test-id='4' id='6'>Search experience for product search in both home and offers page</a>
+<a href="#" class="linked" test-id='1' id='3'>Search experience for product search in both home and offers page</a>
 <div class="">
 <span class="badge badge-default">Search and place the order for products.Search experience for product search in both home and offers page</span>
 </div>
@@ -447,9 +468,9 @@
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>07:14:44 am</td>
+<td>07:48:30 am</td>
 <td>
-<a href="#" class="linked" test-id='4' id='9'>Search experience for product search in both home and offers page</a>
+<a href="#" class="linked" test-id='1' id='8'>Search experience for product search in both home and offers page</a>
 <div class="">
 <span class="badge badge-default">Search and place the order for products.Search experience for product search in both home and offers page</span>
 </div>
@@ -483,9 +504,9 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>07:14:44 am</td>
+<td>07:48:30 am</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>Search experience for product search in both home and offers page</a>
+<a href="#" class="linked" test-id='4' id='6'>Search experience for product search in both home and offers page</a>
 <div class="">
 <span class="badge badge-default">Search and add product to cart and checkout.Search experience for product search in both home and offers page</span>
 </div>
@@ -493,9 +514,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>07:14:44 am</td>
+<td>07:48:30 am</td>
 <td>
-<a href="#" class="linked" test-id='1' id='7'>Search experience for product search in both home and offers page</a>
+<a href="#" class="linked" test-id='4' id='7'>Search experience for product search in both home and offers page</a>
 <div class="">
 <span class="badge badge-default">Search and add product to cart and checkout.Search experience for product search in both home and offers page</span>
 </div>
@@ -503,9 +524,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>07:14:44 am</td>
+<td>07:48:30 am</td>
 <td>
-<a href="#" class="linked" test-id='1' id='8'>Search experience for product search in both home and offers page</a>
+<a href="#" class="linked" test-id='4' id='9'>Search experience for product search in both home and offers page</a>
 <div class="">
 <span class="badge badge-default">Search and add product to cart and checkout.Search experience for product search in both home and offers page</span>
 </div>
@@ -528,13 +549,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 19, 2024 07:14:43 am</h3>
+<h3>Dec 19, 2024 07:48:28 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 19, 2024 07:15:42 am</h3>
+<h3>Dec 19, 2024 07:49:24 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -605,7 +626,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='95%'><b>22</b> steps passed</small></div>
+<div><small data-tooltip='95%'><b>23</b> steps passed</small></div>
 <div>
 <small data-tooltip='4%'><b>1</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -624,7 +645,7 @@
 </div></div>
 <script>
 var timeline = {
-"Search and add product to cart and checkout":58.267,"Search and place the order for products":57.947
+"Search and place the order for products":51.267,"Search and add product to cart and checkout":53.597
 };
 </script>
 <div class="row">
@@ -669,7 +690,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 22,
+passGrandChild: 23,
 failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 0,
