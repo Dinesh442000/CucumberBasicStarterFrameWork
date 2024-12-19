@@ -1,5 +1,6 @@
 Feature: Search and add product to cart and checkout
 
+@PlaceOrder
 Scenario Outline: Search experience for product search in both home and offers page
 
 Given User is on GreenCart Landing page
@@ -10,4 +11,6 @@ Then validate product name in cart page matches with Landing page
 
 Examples:
 | Name 		| Quantity |
-| Tomato 	| 		3		 |
+| Potato 	| 		3		 |
+| Beans 	|			8		 |
+| Carrot  |    10 	 |

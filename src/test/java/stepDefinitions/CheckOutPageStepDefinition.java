@@ -24,6 +24,6 @@ public class CheckOutPageStepDefinition {
 		cartPage = testConceptSetup.pageObjectManager.cartPage();
 		String inTableValue = cartPage.getQuantity();
 		Assert.assertEquals(inTableValue, testConceptSetup.quantity);
-	    
+	    System.out.println(inTableValue+"This is correct Value");
 	}
 }

@@ -43,12 +43,12 @@ public class LandingPage {
 	
 	public void clickOnCartBag() throws InterruptedException {
 		driver.findElement(cartBag).click();
-		Thread.sleep(3000);
-		WebElement element = driver.findElement(checkOutButton);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-		element.click();
+//		WebElement element = driver.findElement(checkOutButton);
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//		element.click();
 	
-		//driver.findElement(checkOutButton).click();
+		driver.findElement(checkOutButton).click();
+		Thread.sleep(2000);
 	}
 //	public void clickOnCheckOut() {
 //		;
