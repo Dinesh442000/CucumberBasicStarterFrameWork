@@ -5,13 +5,12 @@ import org.testng.annotations.DataProvider;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = "src/test/java/features", glue = "stepDefinitions"
-,monochrome = true, tags = "@PlaceOrder or @SearchOrder", 
+@CucumberOptions(features = "@target/failed_scenarios.txt", glue = "stepDefinitions"
+,monochrome = true, 
 plugin = {"html:target/cucumber.html", "json:target/cucumber.json",
-		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-		"rerun:target/failed_scenarios.txt"}
+		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
-public class TestNGTestRunner extends AbstractTestNGCucumberTests  {
+public class FailedTestRunner extends AbstractTestNGCucumberTests  {
 	
 	@DataProvider(parallel = true)
 	public Object[][] scenarios(){
